@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# E-Commerce Product Listing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is an e-commerce product listing application that fetches product data from an API and displays it with filtering options. The application uses React with Redux Toolkit for state management.
 
-## Available Scripts
+Live Demo 
 
-In the project directory, you can run:
+Check out the live version of the project: [E-Commerce Website](https://e-commerce-website-theta-neon.vercel.app/)
 
-### `npm start`
+## Installation & Running the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+Ensure you have Node.js and npm installed on your system.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps to Install and Run
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/your-repository-link.git
+   cd your-project-folder
+   ```
 
-### `npm test`
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Start the Application**
+   ```sh
+   npm start
+   ```
 
-### `npm run build`
+4. **Access the App**
+   - Open `http://localhost:3000/` in your web browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design Decisions & Notable Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### State Management with Redux Toolkit
+- The application uses Redux Toolkit to manage global state efficiently.
+- The `productSlice.js` handles actions like fetching, filtering, and managing loading states.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### API Integration
+- Products and categories are fetched from `https://fakestoreapi.com/products` and `https://fakestoreapi.com/products/categories`.
+- Redux actions update the store, making data accessible across components.
 
-### `npm run eject`
+### Custom Hooks
+- The `useProductAPI.js` custom hook abstracts API calls and state logic, making the components cleaner and easier to manage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Filtering Feature
+- Users can filter products by category, with Redux storing both full product lists and filtered views.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges & Potential Improvements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Challenges Faced
+- **State Management Complexity**: Managing multiple states for loading, error handling, and filtering required careful implementation.
+- **API Response Handling**: Ensuring smooth loading states and handling errors from API failures.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Future Improvements
+- **Pagination & Search**: Adding pagination and search functionality to improve usability.
+- **Error Handling Enhancements**: Improving user feedback on API failures, such as showing toast notifications.
+- **Unit Testing**: Implementing Jest & React Testing Library to improve reliability.
 
-## Learn More
+## Contribution
+Feel free to fork this repository and submit pull requests for improvements.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
