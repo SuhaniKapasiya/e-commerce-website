@@ -3,9 +3,9 @@
 ## Overview
 This project is an e-commerce product listing application that fetches product data from an API and displays it with filtering options. The application uses React with Redux Toolkit for state management.
 
-Live Demo
+Live Demo 
 
-Check out the live version of the project: E-Commerce Website
+Check out the live version of the project: [E-Commerce Website](https://e-commerce-website-theta-neon.vercel.app/)
 
 ## Installation & Running the Project
 
